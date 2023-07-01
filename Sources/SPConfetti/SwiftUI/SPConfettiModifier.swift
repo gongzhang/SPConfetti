@@ -142,4 +142,32 @@ extension View {
         }
     }
 }
+
+@available(iOS 13.0, tvOS 13.0, *)
+struct ConfettiSwiftUI_Previews: PreviewProvider {
+    struct Preview: View {
+        @State private var isPresenting = false
+        
+        var body: some View {
+            VStack {
+                Toggle("🎉", isOn: $isPresenting)
+                    .fixedSize()
+            }
+            .confetti(isPresented: $isPresenting,
+                          animation: .fullWidthToDown,
+                          particles: [.triangle, .arc],
+                          duration: 1.0)
+                .confettiParticle(\.velocity, 600)
+                .confettiParticle(\.velocityRange, 50)
+                .confettiParticle(\.birthRate, 200)
+                .confettiParticle(\.spin, 4)
+        }
+        
+    }
+    
+    static var previews: some View {
+        Preview()
+    }
+}
+
 #endif
