@@ -1,11 +1,11 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.9
 
 import PackageDescription
 
 let package = Package(
     name: "SPConfetti",
     platforms: [
-        .iOS(.v11), .tvOS(.v11)
+        .iOS(.v11), .tvOS(.v11), .visionOS(.v1)
     ],
     products: [
         .library(
