@@ -246,10 +246,10 @@ open class SPConfettiView: UIView {
     }
     
     /**
-     SPConfetti: Calculate particle width with screen width or height and particles factor from config.
+     SPConfetti: Particle width in pt.
      */
     private var particleWidth: CGFloat {
-        (min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)) * particlesConfig.particleSideSizeFactor
+        particlesConfig.particleSize
     }
     
     /**

@@ -161,6 +161,7 @@ struct ConfettiSwiftUI_Previews: PreviewProvider {
                 .confettiParticle(\.velocityRange, 50)
                 .confettiParticle(\.birthRate, 200)
                 .confettiParticle(\.spin, 4)
+                .confettiParticle(\.particleSize, 10)
         }
         
     }
